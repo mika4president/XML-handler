@@ -13,7 +13,79 @@
     <time>11:44:01</time>
     <to>Herman</to>
     <from>Bert</from>
-    <heading>Hi there!</heading>
-    <body>So here is another message</body>
-  </note>git 
+    <heading>Rdeminder</heading>
+    <body>Ddon't dforget me this weekend!</body>
+  </note>
+  <note>
+    <date>09-08-2017</date>
+    <time>09:44:01</time>
+    <to>Tove</to>
+    <from>Bert</from>
+    <heading>cadscads</heading>
+    <body>Dcadscadsnd!</body>
+  </note>
+  <note>
+    <date>09-08-2017</date>
+    <time>09:44:01</time>
+    <to>Ernie</to>
+    <from>Bert</from>
+    <heading>cadscads</heading>
+    <body>Let's sesamstraat!</body>
+  </note>
+  <note>
+    <date>datum</date>
+    <time>tijd</time>
+    <to>receiver</to>
+    <from>sender</from>
+    <heading>This is my Heading</heading>
+    <body>And this is my body</body>
+  </note>
+  <note>
+    <date>datum</date>
+    <time>tijd</time>
+    <to>receiver</to>
+    <from>sender</from>
+    <heading>This is my Heading</heading>
+    <body>And this is my body</body>
+  </note>
+  <note>
+    <date>datum</date>
+    <time>tijd</time>
+    <to>receiver</to>
+    <from>sender</from>
+    <heading>This is my Heading</heading>
+    <body>And this is my body</body>
+  </note>
+  <note>
+    <date>datum</date>
+    <time>tijd</time>
+    <to>receiver</to>
+    <from>sender</from>
+    <heading>This is my Heading</heading>
+    <body>And this is my body</body>
+  </note>
+  <note>
+    <date>24-08-2017</date>
+    <time>14:06:26</time>
+    <to>receiver</to>
+    <from>sender</from>
+    <heading>This is my Heading</heading>
+    <body>And this is my busdy</body>
+  </note>
+  <note>
+    <date>24-08-2017</date>
+    <time>14:06:54</time>
+    <to>receiver</to>
+    <from>sender</from>
+    <heading>This is my Heading</heading>
+    <body>And this is my busdy</body>
+  </note>
+  <note>
+    <date>24-08-2017</date>
+    <time>14:10:27</time>
+    <to>receiver</to>
+    <from>sender</from>
+    <heading>This is my Heading</heading>
+    <body>And this is my busdy</body>
+  </note>
 </messages>

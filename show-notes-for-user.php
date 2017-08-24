@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $username = $_POST['user'];
       } else {
         //TO-DO: What if no username was provided? Should we redirect, or set username to some value?
+        echo "hmmm empty user-name?";
           }
 
 
