@@ -3,6 +3,22 @@
 //usage: Sent receiver, send, heading and body with POST parameters.
 
 
+//Check if POST request is done;
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+
+
+      //Checken if username is sent
+      //Reminder to self: POST is used in cases of "send this page data" and GET is used in cases of "read this page"
+      if (isset($_POST['receiver'])){
+        $receiver = $_POST['receiver'];
+      } else {
+        //TO-DO: What if no username was provided? Should we redirect, or set username to some value?
+        echo "hmmm empty user-name?";
+          }
+
+
+
 //configuration
 $url = 'test.xml';
 $messages = simplexml_load_file($url);
@@ -14,7 +30,7 @@ $currenttime = date('H:i:s');
 $note = $messages->addChild('note');
 $date  = $note->addChild('date', $currentdate);
 $time  = $note->addChild('time', $currenttime);
-$to  = $note->addChild('to', "receiver");
+$to  = $note->addChild('to', $receiver);
 $from  = $note->addChild('from', "sender");
 $heading = $note->addChild('heading', "This is my Heading");
 $body = $note->addChild('body', "And this is my body");
