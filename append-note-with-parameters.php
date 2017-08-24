@@ -17,6 +17,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "hmmm empty user-name?";
           }
 
+          if (isset($_POST['heading'])){
+            $heading = $_POST['heading'];
+          }
+
+          if (isset($_POST['body'])){
+            $body = $_POST['body'];
+          }
 
 
 //configuration
@@ -32,17 +39,17 @@ $date  = $note->addChild('date', $currentdate);
 $time  = $note->addChild('time', $currenttime);
 $to  = $note->addChild('to', $receiver);
 $from  = $note->addChild('from', "sender");
-$heading = $note->addChild('heading', "This is my Heading");
-$body = $note->addChild('body', "And this is my body");
+$heading = $note->addChild('heading', $heading);
+$body = $note->addChild('body', $body);
 
 
-//writing to new file with indented tags, to prevent squashing the tags. This makes it more readable.
+//writing to file with indented tags, to prevent squashing the tags. This makes it more readable.
 $domxml = new DOMDocument('1.0');
 $domxml->preserveWhiteSpace = false;
 $domxml->formatOutput = true;
 $domxml->loadXML($messages->asXML());
 $domxml->save($url);
-
+}
 
 ?>
 

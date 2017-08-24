@@ -9,7 +9,12 @@
      It redirects user-name with POST method to append-note-with-parameters.php
   <br><br>
   <form action="append-note-with-parameters.php" method="post">
-<input name="receiver" type="text" />
+
+<p style="text-align:left; padding-left:40%;">
+To: <input name="receiver" type="text" maxlength="30"  /><br>
+Subject: <input name="heading" type="text" maxlength="60" style="width: 300px;" /><br>
+Text: <input name="body" type="text" maxlength="500" style="width: 300px" /><br>
+</p>
 
 <input type="submit" value="Send">
   </form>

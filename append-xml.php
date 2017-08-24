@@ -13,7 +13,7 @@ $from  = $note->addChild('from', "sender");
 $heading = $note->addChild('heading', "This is my Heading");
 $body = $note->addChild('body', "And this is my busdy");
 
-//writing to new file with indented tags, to prevent 1-line XML
+//writing to file with indented tags, to prevent 1-line XML
 $domxml = new DOMDocument('1.0');
 $domxml->preserveWhiteSpace = false;
 $domxml->formatOutput = true;
