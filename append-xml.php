@@ -2,7 +2,6 @@
 <?php
 $url = 'test.xml';
 $desserts = simplexml_load_file($url);
-
 $currentdate = date('d-m-Y');
 $currenttime = date('H:i:s');
 
@@ -14,18 +13,10 @@ $from  = $note->addChild('from', "sender");
 $heading = $note->addChild('heading', "This is my Heading");
 $body = $note->addChild('body', "And this is my busdy");
 
-
-//echo $desserts->asXML(); // of print_r is eigenlijk beter
-
-
-//writing to file:
-//$desserts->asXML($url);
-
-//writing to new file with indented tags, anders wordt het maar 1 line
+//writing to new file with indented tags, to prevent 1-line XML
 $domxml = new DOMDocument('1.0');
 $domxml->preserveWhiteSpace = false;
 $domxml->formatOutput = true;
-/* @var $xml SimpleXMLElement */
 $domxml->loadXML($desserts->asXML());
 $domxml->save($url);
 
