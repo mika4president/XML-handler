@@ -3,26 +3,22 @@
 $url = 'test.xml';
 $desserts = simplexml_load_file($url);
 
+$currentdate = date('d-m-Y');
+$currenttime = date('H:i:s');
+
 $note = $desserts->addChild('note');
-$date  = $note->addChild('date', "datum");
-$time  = $note->addChild('time', "tijd");
+$date  = $note->addChild('date', $currentdate);
+$time  = $note->addChild('time', $currenttime);
 $to  = $note->addChild('to', "receiver");
 $from  = $note->addChild('from', "sender");
 $heading = $note->addChild('heading', "This is my Heading");
 $body = $note->addChild('body', "And this is my body");
 
 
-//echo $desserts->asXML(); // of print_r is eigenlijk beter
-
-
-//writing to file:
-//$desserts->asXML($url);
-
-//writing to new file with indented tags, anders wordt het maar 1 line
+//writing to new file with indented tags, to prevent squashing the tags. This makes it more readable.
 $domxml = new DOMDocument('1.0');
 $domxml->preserveWhiteSpace = false;
 $domxml->formatOutput = true;
-/* @var $xml SimpleXMLElement */
 $domxml->loadXML($desserts->asXML());
 $domxml->save($url);
 
