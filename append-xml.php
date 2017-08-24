@@ -2,10 +2,11 @@
 <?php
 $url = 'test.xml';
 $desserts = simplexml_load_file($url);
-
 $currentdate = date('d-m-Y');
 $currenttime = date('H:i:s');
 
+
+//adding a new note to the XML
 $note = $desserts->addChild('note');
 $date  = $note->addChild('date', $currentdate);
 $time  = $note->addChild('time', $currenttime);
