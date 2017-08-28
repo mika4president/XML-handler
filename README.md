@@ -5,5 +5,5 @@ Just a side project of mine  to learn something about XML.
 Idea is to play around with XML to see how it works. Prototype projects is a messaging system.<br><br>
 
 • Main XML file contains all the messages<br>
-• Each user can view only the notes with TO:USER (see show-notes-for-user.php)<br>
+• Each user can view only the notes with TO:USER (see show-messages-for-user.php)<br>
 • Messages can be added to the XML with append-xml.php<br>
