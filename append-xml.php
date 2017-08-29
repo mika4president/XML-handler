@@ -1,11 +1,11 @@
 
 <?php
 $url = 'test.xml';
-$desserts = simplexml_load_file($url);
+$messages = simplexml_load_file($url);
 $currentdate = date('d-m-Y');
 $currenttime = date('H:i:s');
 
-$note = $desserts->addChild('note');
+$note = $messages->addChild('note');
 $date  = $note->addChild('date', $currentdate);
 $time  = $note->addChild('time', $currenttime);
 $to  = $note->addChild('to', "receiver");
@@ -17,7 +17,7 @@ $body = $note->addChild('body', "And this is my busdy");
 $domxml = new DOMDocument('1.0');
 $domxml->preserveWhiteSpace = false;
 $domxml->formatOutput = true;
-$domxml->loadXML($desserts->asXML());
+$domxml->loadXML($messages->asXML());
 $domxml->save($url);
 
 
